@@ -28,11 +28,13 @@
       "ul"
     ],
     "classes": [
-      "antialiased",
+      "antialiased]",
       "aria-[current=true]:text-[--text-1]",
       "aspect-[3/2]",
       "bg-[--surface-1]",
+      "cursor-default",
       "cursor-zoom-in",
+      "dark:prose-invert",
       "duration-150",
       "flex",
       "flex-auto",
@@ -86,6 +88,8 @@
       "p-10",
       "p-2",
       "p-4",
+      "prose",
+      "prose-neutral",
       "px-4",
       "px-6",
       "py-2",
