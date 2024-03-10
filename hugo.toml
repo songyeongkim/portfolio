@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'songyeongkim'
 
 [params]
-  defaultTheme = "dark"
+  defaultTheme = "light"
   description = "songyeongkim illustrations"
   title = "songyeongkim"
   [params.author]

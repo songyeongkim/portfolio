@@ -1,0 +1,9 @@
+<menu class="mx-auto mb-6 mt-6 hidden w-full max-w-screen-md select-none text-center text-lg font-semibold text-[--text-2]" id="menu">
+  {{ range site.Menus.main }}
+    <li itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="inline-block mx-10">
+      <a class="inline-block py-2 hover:text-[--text-1] aria-[current=true]:text-[--text-1]" aria-current="{{ or (page.IsMenuCurrent .Menu .) (page.HasMenuCurrent .Menu .) }}" href="{{ .URL }}" itemprop="url">
+        <span itemprop="name">{{ .Name }}</span>
+      </a>
+    </li>
+  {{ end }}
+</menu>

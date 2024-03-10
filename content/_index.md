@@ -1,5 +1,5 @@
 ---
-description: 그림 작업 포트폴리오 소개글
+description: 영혼으로 바라보는 세상
 #lastmod: 2023-07-05
 title: songyeongkim
 featured_image: title.png # default: first image in this directory
