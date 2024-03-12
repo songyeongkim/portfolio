@@ -6,6 +6,7 @@ title = 'songyeongkim'
   defaultTheme = "light"
   description = "songyeongkim illustrations"
   title = "songyeongkim"
+  link = ""
   [params.author]
     email = "songyeong125@gmail.com"
     name = "songyeongkim"

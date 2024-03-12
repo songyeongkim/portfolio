@@ -5,5 +5,8 @@
   {{ if .Description }}
     <p class="text-[--text-2] md:text-lg">{{ .Description }}</p>
   {{ end }}
+  {{ if .Param "link" }}
+    <a class="text-[--text-2] md:text-lg" href="{{ .Param "link" }}">{{ .Param "link" }}</a>
+  {{ end }}
 </hgroup>
 

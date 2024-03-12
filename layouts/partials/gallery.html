@@ -31,7 +31,7 @@
         )
       }}
     {{ end }}
-    {{ range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") }}
+    {{ range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "desc") }}
       {{ $image := .image }}
       {{ $thumbnail := ($image.Fit (printf "%s %s" "600x600" .rotation)) }}
       {{ $full := ($image.Fit (printf "%s %s" "1600x1600" .rotation)) }}
