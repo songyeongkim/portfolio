@@ -1,12 +1,12 @@
-<hgroup class="mx-auto mb-16 mt-12 flex max-w-screen-lg flex-col items-center gap-6 px-6 text-center sm:w-5/6">
+<hgroup class="mx-auto mb-10 mt-12 flex max-w-screen-lg flex-col items-center gap-2 px-6 text-center sm:w-5/6">
   {{ if .Title }}
-  <h1 class="text-3xl font-bold md:text-4xl">{{ .Title }}</h1>
+  <h1 class="text-3xl font-bold md:text-xl">{{ .Title }}</h1>
   {{ end }}
   {{ if .Description }}
-    <p class="text-[--text-2] md:text-lg">{{ .Description }}</p>
+    <p class="text-[--text-2] md:text-base">{{ .Description }}</p>
   {{ end }}
   {{ if .Param "link" }}
-    <a class="text-[--text-2] md:text-lg" href="{{ .Param "link" }}">{{ .Param "link" }}</a>
+    <a class="text-[--text-2] md:text-base" href="{{ .Param "link" }}">{{ .Param "link" }}</a>
   {{ end }}
 </hgroup>
 

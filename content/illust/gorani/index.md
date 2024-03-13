@@ -1,7 +1,7 @@
 ---
+title : Gorani Youtube
 featured_image: illust.jpg
 link : https://www.youtube.com/@dml00014
-description : 유튜브 고라니 잡곡창고
 #type: gallery
 sort_by: Name
 resources:
