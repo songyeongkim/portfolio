@@ -33,6 +33,7 @@ if (gallery) {
     arrowPrevTitle: params.arrowPrevTitle,
     arrowNextTitle: params.arrowNextTitle,
     errorMsg: params.errorMsg,
+    videolink: params.videourl
   });
 
   /* 다운로드 버튼
@@ -61,8 +62,6 @@ if (gallery) {
   });
 
   */
-
-    //비디오 링크가 있을 경우 비디오로 대체
     lightbox.addFilter('itemData', (itemData, index) => {
         const videoUrl = itemData.element.dataset.videoUrl;
         if (videoUrl) {
@@ -73,7 +72,7 @@ if (gallery) {
 
     lightbox.on('contentLoad', (e) => {
         const { content } = e;
-        if (content.type === 'video') {
+        if (content.type === 'pswp-video') {
             // prevent the deafult behavior
             e.preventDefault();
 
@@ -84,7 +83,8 @@ if (gallery) {
 
             const iframe = document.createElement('iframe');
             iframe.setAttribute('allowfullscreen', '');
-            iframe.src = content.data.videoUrl;
+            iframe.setAttribute('src', content.data.videoUrl);
+            console.log( content.data.videoUrl );
             content.element.appendChild(iframe);
         }
     });

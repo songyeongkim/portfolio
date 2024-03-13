@@ -7,10 +7,15 @@ title = 'songyeongkim'
   description = "songyeongkim illustrations"
   title = "songyeongkim"
   link = ""
+  videoUrl = ""
   [params.author]
     email = "songyeong125@gmail.com"
     name = "songyeongkim"
 
+ [[resources]]
+ title = ""
+ videoUrl = ""
+ src = []
 
 [module]
   [[module.imports]]
