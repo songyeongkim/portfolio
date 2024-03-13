@@ -35,6 +35,8 @@ if (gallery) {
     errorMsg: params.errorMsg,
   });
 
+  /* 다운로드 버튼
+
   lightbox.on("uiRegister", () => {
     lightbox.pswp.ui.registerElement({
       name: "download-button",
@@ -57,6 +59,37 @@ if (gallery) {
       },
     });
   });
+
+  */
+
+    //비디오 링크가 있을 경우 비디오로 대체
+    lightbox.addFilter('itemData', (itemData, index) => {
+        const videoUrl = itemData.element.dataset.videoUrl;
+        if (videoUrl) {
+            itemData.videoUrl = videoUrl;
+        }
+        return itemData;
+    });
+
+    lightbox.on('contentLoad', (e) => {
+        const { content } = e;
+        if (content.type === 'video') {
+            // prevent the deafult behavior
+            e.preventDefault();
+
+            // Create a container for iframe
+            // and assign it to the `content.element` property
+            content.element = document.createElement('div');
+            content.element.className = 'pswp__video-container';
+
+            const iframe = document.createElement('iframe');
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.src = content.data.videoUrl;
+            content.element.appendChild(iframe);
+        }
+    });
+
+    
 
   lightbox.on("change", () => {
     history.replaceState("", document.title, "#" + lightbox.pswp.currSlide.index);
