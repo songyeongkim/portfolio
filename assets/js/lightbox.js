@@ -69,7 +69,9 @@ if (gallery) {
         }
         return itemData;
     });
+    
 
+    
     lightbox.on('contentLoad', (e) => {
         const { content } = e;
         if (content.type === 'pswp-video') {
@@ -88,9 +90,13 @@ if (gallery) {
             content.element.appendChild(iframe);
 
             const div = document.createElement('div');
-            const p = document.createElement('div');
+            const img = document.createElement('img');
+            const p = document.createElement('p');
+            p.innerText = "영상을 로드 중입니다.";
             div.setAttribute('id', 'readytoloadtxt');
-            p.innerText = '로드를 기다려 주세요';
+            img.src = content.data.src
+            //이미지로 대체할 방법?
+            div.appendChild(img);
             div.appendChild(p);
             content.element.appendChild(div);
 
@@ -99,8 +105,7 @@ if (gallery) {
             });
         }
     });
-
-    //iframe 로드 되는 동안 시간이 걸리므로 로드 대기 문구를 출력해보자.
+    
 
 
     
