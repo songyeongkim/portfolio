@@ -36,7 +36,7 @@ if (gallery) {
     videolink: params.videourl
   });
 
-  /* �ٿ�ε� ��ư
+  /* �ٿ�ε� ��ư
 
   lightbox.on("uiRegister", () => {
     lightbox.pswp.ui.registerElement({
@@ -86,8 +86,22 @@ if (gallery) {
             iframe.setAttribute('src', content.data.videoUrl);
             console.log( content.data.videoUrl );
             content.element.appendChild(iframe);
+
+            const div = document.createElement('div');
+            const p = document.createElement('div');
+            div.setAttribute('id', 'readytoloadtxt');
+            p.innerText = '로드를 기다려 주세요';
+            div.appendChild(p);
+            content.element.appendChild(div);
+
+            iframe.addEventListener('load', function(){
+              div.style.display = 'none';
+            });
         }
     });
+
+    //iframe 로드 되는 동안 시간이 걸리므로 로드 대기 문구를 출력해보자.
+
 
     
 

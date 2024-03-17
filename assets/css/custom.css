@@ -10,3 +10,12 @@
     width : 100%;
     height : 100%;
 }
+
+#readytoloadtxt
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
