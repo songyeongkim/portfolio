@@ -1,12 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Reenie+Beanie&display=swap');
-
-.font-font-EduNSWACTFoundation{
-    font-family: "EduNSWACTFoundation", cursive;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-}
-
 
 .pswp__video-container iframe, .pswp__video-container object, .pswp__video-container embed{
     position : absolute;

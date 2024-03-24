@@ -5,12 +5,15 @@
 @import "photoswipe/dist/photoswipe";
 @import "photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin";
 
-@font-face{
-  font-family: "ReenieBeanie";
-  src:url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+
+.font-EduNSWACTFoundation{
+  font-family: "Edu NSW ACT Foundation", cursive;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
+
 
 :root {
   color-scheme: light;
