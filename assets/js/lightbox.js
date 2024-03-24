@@ -90,14 +90,16 @@ if (gallery) {
             content.element.appendChild(iframe);
 
             const div = document.createElement('div');
-            const img = document.createElement('img');
-            const p = document.createElement('p');
-            p.innerText = "영상을 로드 중입니다.";
+            //const img = document.createElement('img');
+            const loaddiv = document.createElement('div');
+            const loadicon = document.createElement('div');
+            loadicon.setAttribute('class', 'loader');
             div.setAttribute('id', 'readytoloadtxt');
-            img.src = content.data.src
+            //img.src = content.data.src
             //이미지로 대체할 방법?
-            div.appendChild(img);
-            div.appendChild(p);
+            //div.appendChild(img);
+            div.appendChild(loaddiv);
+            loaddiv.appendChild(loadicon);
             content.element.appendChild(div);
 
             iframe.addEventListener('load', function(){
@@ -105,9 +107,6 @@ if (gallery) {
             });
         }
     });
-    
-
-
     
 
   lightbox.on("change", () => {

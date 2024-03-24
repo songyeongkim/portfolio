@@ -1,7 +1,12 @@
-.pswp__video-container
-{
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Reenie+Beanie&display=swap');
 
+.font-font-EduNSWACTFoundation{
+    font-family: "EduNSWACTFoundation", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
 }
+
 
 .pswp__video-container iframe, .pswp__video-container object, .pswp__video-container embed{
     position : absolute;
@@ -18,6 +23,8 @@
     height: 100%;
     text-align: center;
     color: white;
+    display: flex;
+    align-items: center;
 }
 
 #readytoloadtxt img
@@ -28,9 +35,26 @@
     position: absolute;
 }
 
-#readytoloadtxt p
+#readytoloadtxt > div
 {
     width: 100%;
-    height: 100%;
     position: absolute;
+    display: inline-block;
+    text-align: center;
 }
+
+
+/* 로드 css. 스타일 변경해야 한다. */
+.loader {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: l5 1s infinite linear alternate;
+    display: inline-block;
+  }
+  @keyframes l5 {
+      0%  {box-shadow: 20px 0 #000, -20px 0 rgba(255, 255, 255, 1);background: #000 }
+      33% {box-shadow: 20px 0 #000, -20px 0 rgba(255, 255, 255, 1);background: rgba(255, 255, 255, 1)}
+      66% {box-shadow: 20px 0 rgba(255, 255, 255, 1),-20px 0 #000; background: rgba(255, 255, 255, 1)}
+      100%{box-shadow: 20px 0 rgba(255, 255, 255, 1),-20px 0 #000; background: #000 }
+  }
